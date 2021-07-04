@@ -1,0 +1,95 @@
+Polymorphism (Poly = Many, Morphism = Forms )
+
+# Polymorphism Definition
+Polymorphism is one of the OOPs feature that allows us to perform a single action in different ways.
+
+Types
+
+1) [Compile Time polymorphism] or [Static Polymorphism]
+   Method Overloading (Can be achieved using Method Overloading and handled by compiler)
+   
+2) [Run Time Polymorphism] or [Dynamic Polymorphism]
+   Method OverRiding (Can be achieved using Method Over Ridiing and handled by JVM)
+   
+   **We can change the implementation of parent method by using Method OverRiding.
+   
+   Automatic Promotion
+   
+   NOTE: [OBJECT is parent class of all the classes in java]
+   
+   [Method OverLoading]   |  [Method OverRiding]
+   [----------------------|--------------------]		  
+   1) Same name (Method)  | 1) Same name
+   2) Same class (Method) | 2) Different class
+   3) Different Args	  | 3) Same Args
+                          |
+   	  1)No of Args		  |  1) No of Args
+   	  2)Sequence of Args  |  2) Seq of Args
+   	  3)Type of Args	  |  3) Type of Args
+   [-------------------------------------------] 
+   						  
+   1) Can we achieve MethodOverloading  by changing the return type of the methods only
+      Ans: No, In java method overloading can't be achieve by changing the return type of method coz of ambiguity.
+      
+Soltn
+##################################################      
+     	ChngRetrunType moe = new ChngRetrunType();
+		//moe.Car(1);
+	}
+	
+	//void Car(int i) // Compile time error
+	{
+		System.out.println("int method");
+	}
+	
+	//int  Car(int i)  //Compile time error
+	{
+		System.out.println("int method");
+	}
+#################################################   
+      
+   2) Can we overload Java Main Method
+      Ans: Yes, We can call any no: of main method in class by method overloading
+           JVM always call main() method which receives string array as args
+           
+Soltn
+######################################################
+public class DuoMainMethod {
+
+	public static void main(String[] args) {
+		
+		System.out.println("1st String main method");
+		DuoMainMethod dm = new DuoMainMethod();
+		dm.main(10);
+	}
+	
+	public static void main (int a){
+		
+		System.out.println("2nd int main method");
+	}
+}
+######################################################
+      
+   3) MethodOverloading and type promotion
+   
+The data type on the left side can be promoted to the any of the data type present in the right side of it.
+
+a) byte → short → int → long
+b) byte → short → int → long → double
+c) byte → short → int → float
+d) int → long → float → double
+e) int → float → double
+f) int → long → double
+g) int → double
+h) float → double
+i) long → double
+j) long → float → double
+k) Char → int → float → double
+l) Char → int → long → double
+m) Char → int → long → float → double
+n) Char → int → double
+   
+4) Different cases of type promotion
+   
+   NOTE: Object is a parent class of all the classes in JAVA means object is parent class of string class. and give the preference to 
+   			string type method b/w parent and child.		

@@ -1,0 +1,28 @@
+
+Final Keyword is only applicable to 
+									1) Variable
+									2) Method
+									3) Class
+									
+
+   1) Final Variable > To create constant variable
+   
+   	// Value of variable can't be cahnged, Since it's final
+   	final String name = "MaxPayne";   
+   
+   2) Final Method > To prevent method OverRiding
+   
+   //Class 1
+   public class C1(){   
+   public final void getData(int age){  
+   	   } 	   
+   }
+   
+   //Class 2
+   public class C2 extends C1(){ // This can't be happn, Since C1 method is final method
+   public void getdata(int age){  
+  	   }
+   }
+
+   
+   3) Final Class > To Prevent Inheritance

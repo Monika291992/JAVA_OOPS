@@ -1,0 +1,77 @@
+Topics
+
+1) Inheritance
+2) Inheriting method of Parent/ Super class
+3) Inheriting variable / property of Parent Class
+4) Single Inheritance
+5) MultiLevel Inheritance
+6) Hierarchical Inheritance
+7) Super Keyword
+8) This Keyword
+
+#INHERITANCE DEFINITION: is used for code reusability
+Inheritance is a mechanism in which one class acquires the property of another class.
+
+It is inheriting the properties of parent class into the child class.
+OR
+Inheritance is the procedure by which one object acquires all the properties behaviors of a parent object.
+
+#INHERITANCE is used: 
+
+a) code reusability
+b) achieve method overriding (polymorphism)
+
+Purpose of Inheritance
+========================
+It promotes the code reusabilty i.e the same methods and variables which are defined in a parent/super/base class can be used in the child/sub/derived class.
+It promotes polymorphism by allowing method overriding.
+
+
+Example, 
+A child inherits the property of his/her parents.
+With Inheritance, we can reuse the fields and methods of the existing class.
+
+#The extends keyword indicates that you are making a new class that derives from an existing class. The meaning of "extends" 
+is to increase the functionality.
+
+Every Airline needs to follow any of the 2 guideline from IntAirlines & all IndianAirlines guidelines
+
+IntGuideline is PARENT class
+
+IndianGuideline is also PARENT class
+
+Note:**Multiple inheritance and Hybrid are not supported in Java through class.
+
+class A{  
+void msg(){System.out.println("Hello");}  
+}  
+class B{  
+void msg(){System.out.println("Welcome");}  
+}  
+class C extends A,B{//suppose if it were  
+   
+ public static void main(String args[]){  
+   C obj=new C();  
+   obj.msg();//Now which msg() method would be invoked?  
+}  
+}  
+
+#Some property doesn't inherit from parent class to child lass
+
+a)Constructor never inherits from one class to another class.
+b)Private method cann't inherit 
+
+Note:**Every class has a super or say parent class ie. Object Class(but object class does not have any parent class)
+
+Disadvantages of Inheritance
+==============================
+Main disadvantage of using inheritance is that the two classes (parent and child class) gets tightly coupled.
+
+This means that if we change code of parent class, it will affect to all the child classes which is inheriting/deriving the parent class, and hence, it cannot be independent of each other.
+
+
+
+
+
+
+

@@ -1,0 +1,92 @@
+#ABSTRACTION
+
+#Abstraction can be achieved by 2 ways
+# by Abstract Class(0-100%)
+# by Interface(100%)
+
+#Abstract_Class  
+
+ABSTRACTION DEFINITION
+Abstraction is a process of hiding the implementation details from the user and showing only functionality to the user.
+
+Another way, it shows only essential things to the user and hides the internal details, for example, sending SMS where you type 
+the text and send the message. You don't know the internal processing about the message delivery.
+
+1)ABSTRACT CLASS DECLARATION:
+A class which declared with keyword using ABSTRACT is known as Abstract class
+Abstraction used to hide details implementation 
+
+2)ABSTRACT CLASS METHOD:
+A class can be said to be abstract class if it has abstract method(without body)
+A class may not contain abstract method even though it can be Abstract class for that (must have abstract keyword at class level)
+
+3)ABSTRACT CLASS EXTENDS:
+If regular class extends Abstract class, then regular class must have implementation of all the abstract method of it
+
+4)ABSTRACT CLASS INTANTIATION:
+An abstract class can not be instantiated, which means you are not allowed to create an object of it.
+
+5)ABSTRACT CLASS OVERIDING
+Using Abstraction method overiding can be used, 
+Since all the class needs to be extends same method in diff class with no argument , Hence Method Overiding is achieved  
+
+ABSTRACT CLASS):A class may contains Concrete & Unconcreter method (with body)  	
+NOTE: Since abstract class can have Concrete & Unconcrete method, hence 0% abstraction is acheive  
+
+
+
+
+public abstract class getValue(){
+
+public class getValue1(){
+
+}
+
+}
+
+#CONCRETE & UNCONCRETE METHOD
+Method with its implementation or body is called concrete & Method without body is called Unconcrete method
+
+ACCESS MODIFIER:
+We can't use Private access modifier in Abstract class coz we need to use the method of same class in any 
+   other class. if we put any method as private then it's can't be used
+
+# Abstract Class Declaration
+
+###############################  
+  // Abstract class
+  public abstract class Car(){
+  }
+###############################
+
+#Abstract Method
+		Method without body(no implementation) is known as abstract method like 
+	
+#####################################
+	public class car{
+  	//Abstract_Method
+	public abstract void color();
+	}
+#####################################
+
+Vehicle c = new Car();
+
+Here by casting instance of Car type to Vehicle reference, we are hiding the complexity of Car type under Vehicle. Now the 
+Vehicle reference can be used to provide the implementation but it will hide the actual implementation process.
+
+#########################################
+
+Why we need an abstract class?
+++++++++++++++++++++++++++++++++
+
+We have a class Animal that has a method sound() and the subclasses(see inheritance) of it like Dog, Lion, Horse, Cat etc. 
+Since the animal sound differs from one animal to another, there is no point to implement this method in parent class. This is 
+because every child class must override this method to give its own implementation details, like Lion class will say “Roar” in 
+this method and Dog class will say “Woof”.
+
+So when we know that all the animal child classes will and should override this method, then there is no point to implement 
+this method in parent class. Thus, making this method abstract would be the good choice as by making this method abstract we 
+force all the sub classes to implement this method( otherwise you will get compilation error), also we need not to give any 
+implementation to this method in parent class.
+
+

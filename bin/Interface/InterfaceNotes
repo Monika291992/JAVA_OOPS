@@ -1,0 +1,228 @@
+
+#INTERFACE DEFINITION
+++++++++++++++++++++++++
+
+a) Interface are similar to Abstract class but having all the methods of abstract type.
+b) Interface are the blueprint of the class. It specifies what the class must do not how.
+
+#INTERFACE USAGE
+++++++++++++++++++
+
+Used to achieve abstraction
+Supports multiple inheritance
+Includes only Un-concrete methods
+Can be used to achieve loose coupling
+Cannot be instantiate i.e can't create object of interface class
+
+Note: From version 8 & 9 we can create Concrete methods  
+
+Different Cases in INTERFACE
+
+Methods// Should be abstract, if not added compiler adds automatically public and abstract
+
+fields // It includes public static final, if not compiler automatically adds it 
+
+
+SYNTAX
+
+#########################################
+public interface CentralTraffic {
+	
+	//INTERFACE
+	// Interface doen't have body in it's method
+	// They can be called by in any other class
+
+	public void GreenGo(); // If we not add abstract keyword in interface, Compiler automatically added it
+	public void RedStop();
+	
+	}
+#########################################
+
+NOTE:
+=======
+
+In 8th java version, we can create the concrete method with default access modifier.
+Also, can create the static concrete method 
+
+In 9th version, can create the private concrete method.
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Note:
+=======
+public interface CentralTraffic {
+
+	 void GreenGo(); // The Java compiler adds public and abstract keywords before the interface method. Moreover, it adds public, static and final keywords before data members.
+	 void RedStop();
+		}
+public class IndianTraffic implements CentralTraffic{
+
+        @Override
+	public void GreenGo() { // it should get public according to the method overriding concept otherwise complier time error will show.
+
+		System.out.println("Person has move on green signal");	
+	}
+}
+
+Condition of Method Overriding:
+==================================
+   [Method OverLoading]   |  [Method OverRiding]
+   [----------------------|--------------------]		  
+   1) Same name (Method)  | 1) Same name
+   2) Same class (Method) | 2) Different class
+   3) Different Args	  | 3) Same Args
+                          |
+   	  1)No of Args		  |  1) No of Args
+   	  2)Sequence of Args  |  2) Seq of Args
+   	  3)Type of Args	  |  3) Type of Args
+   	  						4) Inheritance
+   [-------------------------------------------]  
+
+######################################################
+
+The relationship between classes and interfaces
+++++++++++++++++++++++++++++++++++++++++++++++++++
+a class extends another class, an interface extends another interface, but a class implements an interface.
+
+#################################################
+
+Difference between Abstraction and Interface
++++++++++++++++++++++++++++++++++++++++++++++++
+		           								
+1) 
+ABSTRACTION: An abstract class can extend only one class or one abstract class at a time
+INTERFACE:  An interface can extend any number of interfaces at a time
+
+2)
+ABSTRACTION: An abstract class can extend another concrete (regular) class or abstract class
+INTERFACE: An interface can only extend another interface
+
+3)	
+ABSTRACTION:  An abstract class can have both abstract(without Body) and concrete methods(With Body)
+INTERFACE: 	An interface can have only abstract methods
+
+4) 
+ABSTRACTION: An abstract class can have protected and public abstract methods
+INTERFACE: An interface can have only have public abstract methods
+
+5) 
+ABSTRACTION: An abstract class can have static, final or static final variable with any access specifier
+INTERFACE:  Interface can only have public static final (constant) variable
+
+6) 
+ABSTRACTION: It can't be instantiate
+INTERFACE: It can't be instantiate
+
+7) 
+ABSTRACTION: Use extends keyword to inherit the properties
+INTERFACE: Use implement keyword to inherit properties
+
+8)
+ABSTRACTION: Abstract keyword is mandatory in method if method is abstract
+INTERFACE: Abstract keyword is not mandatory in method, compiler automatically put it.
+
+9) 
+ABSTRACTION:Doesn't support multiple inheritance
+INTERFACE:Supports multiple inheritance
+
+##############################################################
+
+KEY POINTS:
+=============
+
+1)While providing implementation in class of any method of an interface, it needs to be mentioned as public.
+
+2)Interface cannot be declared as private, protected or transient.
+
+3)All the interface methods are by default abstract and public.
+
+4)Variables declared in interface are public, static and final by default.
+
+5)Interface variables must be initialized at the time of declaration otherwise compiler will throw an error.
+
+interface Try
+{
+      int x;//Compile-time error
+}
+6)Inside any implementation class, you cannot change the variables declared in interface because by default, they are public, 
+static and final. Here we are implementing the interface “Try” which has a variable x. When we tried to set the value for variable 
+x we got compilation error as the variable x is public static final by default and final variables can not be re-initialized.
+
+class Sample implements Try
+{
+  public static void main(String args[])
+  {
+     x=20; //compile time error
+  }
+}
+
+7)If there are two or more same methods in two interfaces and a class implements both interfaces, implementation of the method 
+once is enough.
+
+8)A class cannot implement two interfaces that have methods with same name but different return type.
+
+interface A
+{
+   public void aaa();
+}
+interface B
+{
+   public int aaa();
+}
+
+class Central implements A,B
+{
+
+   public void aaa() // error
+   {
+   }
+   public int aaa() // error
+   {
+   }
+   public static void main(String args[])
+   {
+
+   }
+}
+9)Variable names conflicts can be resolved by interface name.
+
+interface A
+{
+    int x=10;
+}
+interface B
+{
+    int x=100;
+}
+class Hello implements A,B
+{
+    public static void Main(String args[])
+    {
+       /* reference to x is ambiguous both variables are x
+        * so we are using interface name to resolve the 
+        * variable
+        */
+       System.out.println(x); 
+       System.out.println(A.x);
+       System.out.println(B.x);
+    }
+}
+
+##############################################################
+
+Q) What is marker or tagged interface?
+
+An interface which has no member is known as a marker or tagged interface, for example, Serializable, Cloneable, Remote, etc. 
+They are used to provide some essential information to the JVM so that JVM may perform some useful operation.
+
+//How Serializable interface is written?  
+public interface Serializable{  
+}  
+
+##############################################################
+
+Nested Interface in Java
+Note: An interface can have another interface which is known as a nested interface
+
+
+
+

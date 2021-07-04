@@ -1,0 +1,34 @@
+
+#Encapsulation
+
+Encapsulation in Java is a process of wrapping code and data together into a single unit,
+
+We can create a fully encapsulated class in Java by making all the data members of the class private.
+Now we can use setter and getter methods to set and get the data in it.
+
+#How to implement encapsulation in java:
+1) Make the instance variables private so that they cannot be accessed directly from outside the class. 
+   You can only public set and get values of these variables through the methods of the class.
+2) Have getter and setter methods in the class to set and get the values of the fields.
+
+#Data Hiding:
+
+The variable of the class will be hidden from other class and can be accessed only through the methods of their current class.
+Encapsulation is also known as “data Hiding“.
+
+example: 
+
+class abc{
+ 
+ private int empid; //data hiding: data can only be accessed by public methods thus making the private fields and their 
+                      implementation hidden for outside classes. That’s why encapsulation is known as data hiding
+
+} 
+
+
+
+class or instance variable > scope is declared with in the class 
+local variable (Method) > scope is declared with in the method.
+
+
+

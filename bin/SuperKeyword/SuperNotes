@@ -1,0 +1,29 @@
+# SUPER DEFINITION
+	Super keyword is used to refer parent class, used to call superclass method and access superclass constructor
+
+SUPER KEYWORD
+	Super keyword is also a reference variable like this keyword
+	Super Keyword refers to PARENT CLASS, while this keyword refers to CURRENT CLASS VARIABLE.
+	
+
+# SUPER KEYWORD USAGE
+	
+  1) super keyword used to refer immediate parent class instance variable.
+  2) super keyword used to invoke immediate parent class method.
+  3) super() keyword is used to invoke immediate parent class constructor.
+  
+  NOTE: super() is added in each class constructor automatically by compiler if there is no super() or this().
+  ***where super() is provided by the compiler implicitly.
+  
+  
+  #The super keyword in Java is a reference variable that is used to refer parent class objects.
+  #The super() in Java is a reference variable that is used to refer parent class constructors
+  
+ 
+#There are few important points to note in this example:
+
+1) super()(or parameterized super must be the first statement in constructor otherwise you will get the compilation error: 
+“Constructor call must be the first statement in a constructor”
+
+2) When we explicitly placed super in the constructor, the java compiler didn’t call the default no-arg constructor of parent class.
+  

@@ -1,0 +1,82 @@
+Constructor: is a block having same name as that of class name. 
+++++++++++++++
+
+1) constructor is a block of codes similar to the method. It is called when an instance of the class is created. 
+2) Constructor is used to initialize the object.
+3) Constructor doesn't include return type or return any value even not void.
+4) Constructor name should be same as class name.
+5) Whenever object is created implicit or default constructor would be called.
+6) A Java constructor cannot be abstract, static, final, and synchronized
+7) We use the 4 type of access modifier private, protected, public or default constructor in Java.
+
+Java Supports three types of constructors:
++++++++++++++++++++++++++++++++++++++++++++	++
+
+1) Default Constructor (No Args Constructor)(Created by Compiler) this is automatically created when not defined by user
+2) User Defined Constructor(No Args Constructor)
+3) Parameterized constructor
+
+a) What is the purpose of a default constructor?
+The default constructor is used to provide the default values to the object like 0, null, etc., depending on the type.
+
+b) Why use the parameterized constructor?
+The parameterized constructor is used to provide different values to distinct objects. However, you can provide the same values 
+also.
+
+Constructor Overloading in Java
+++++++++++++++++++++++++++++++++++
+In Java, a constructor is just like a method but without return type. It can also be overloaded like Java methods.
+
+It is a technique of having more than one constructor with different parameter lists. They are arranged in a way that each 
+constructor performs a different task. They are differentiated by the compiler by the number of parameters in the list and
+their types.
+
+Constructor Chaining
+++++++++++++++++++++++
+
+It is a process of calling one constructor from another constructor in the same class. Since constructor can only be called 
+from another constructor, constructor chaining is used for this purpose.To call constructor from another constructor this 
+keyword is used. This keyword is used to refer current object.
+
+Private Constructors
+++++++++++++++++++++++
+
+In Java, we can create private constructor to prevent class being instantiate. It means by declaring a private constructor, 
+it restricts to create object of that class.It is used to create singleton class. A class which can have only single object 
+known as singleton class.
+
+In private constructor, only one object can be created and the object is created within the class and also all the methods are 
+static. An object can not be created if a private constructor is present inside a class. A class which have a private 
+constructor and all the methods are static then it is called Utility class.
+
+	
+	//The purpose of constructor is to initialize the object of a class
+    //while the purpose of a method is to perform a task by executing java code
+    //Constructors cannot be abstract, final, static and synchronised while methods can be
+
+	//Each time a new object is created at least one constructor will be invoked.
+
+	//Car c = new Car()       //User defined constructor(No arg Constructor)
+	//Car c = new Car(name); //Parameterized constructor invoked
+
+
+	///Note: Default value of 
+	                              String = null   string abc; int a;
+									 int = 0 
+public class DuoMainMethod(){
+
+public static void main(String[] args) {
+		
+		System.out.println("1st String main method");
+		DuoMainMethod dm = new DuoMainMethod(); // DuoMainMethod(); is constructor
+		dm.main(10);
+	}
+		public static void main (int a){
+		
+		System.out.println("2nd int main method");
+	}	
+}
+
+
+int a=10; // initialization
+int a; //declaration
